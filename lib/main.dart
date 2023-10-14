@@ -11,11 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: GeneralPage(
-          onBackButtonPressed: () {},
-          child: const Text('body'),
-        ));
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SignInPage(),
+    );
   }
 }

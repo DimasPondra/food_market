@@ -135,10 +135,22 @@ class _AddressPageState extends State<AddressPage> {
                 borderRadius: BorderRadius.circular(8),
               ),
               child: DropdownButton(
+                value: 'Surabaya',
                 isExpanded: true,
                 underline: const SizedBox(),
                 items: const [
-                  DropdownMenuItem(child: Text('Surabaya')),
+                  DropdownMenuItem(
+                    value: 'Surabaya',
+                    child: Text(
+                      'Surabaya',
+                    ),
+                  ),
+                  DropdownMenuItem(
+                    value: 'Jakarta',
+                    child: Text(
+                      'Jakarta',
+                    ),
+                  ),
                 ],
                 onChanged: (item) {},
               ),

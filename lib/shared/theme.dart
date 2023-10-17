@@ -5,6 +5,8 @@ Color greyColor = "8D92A3".toColor();
 Color blackColor = "020202".toColor();
 
 TextStyle greyFontStyle = GoogleFonts.poppins().copyWith(color: greyColor);
+TextStyle blackFontStyle = GoogleFonts.poppins().copyWith(color: blackColor);
+
 TextStyle labelFontStyle = GoogleFonts.poppins().copyWith(
   color: blackColor,
   fontSize: 16,

@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage> {
               },
               children: const [
                 Center(
-                  child: Text('Home'),
+                  child: FoodPage(),
                 ),
                 Center(
                   child: Text('Order'),

@@ -1,7 +1,12 @@
 part of 'widgets.dart';
 
 class FoodCard extends StatelessWidget {
-  const FoodCard({super.key});
+  final Food food;
+
+  const FoodCard({
+    super.key,
+    required this.food,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +17,42 @@ class FoodCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: const [
-          BoxShadow(spreadRadius: 3, blurRadius: 15, color: Colors.black26),
+          BoxShadow(spreadRadius: 3, blurRadius: 15, color: Colors.black12),
         ],
       ),
-      child: const Column(
+      child: Column(
         children: [
-          RatingStars(
-            rate: 3.3,
+          Container(
+            height: 140,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(8),
+                topRight: Radius.circular(8),
+              ),
+              image: DecorationImage(
+                image: NetworkImage(food.picturePath),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.fromLTRB(12, 12, 12, 6),
+            width: 200,
+            child: Text(
+              food.name,
+              style: blackFontStyle.copyWith(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+              ),
+              maxLines: 1,
+              overflow: TextOverflow.clip,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 12),
+            child: RatingStars(
+              rate: food.rate,
+            ),
           ),
         ],
       ),

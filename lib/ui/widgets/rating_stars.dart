@@ -10,7 +10,7 @@ class RatingStars extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int numberOfStars = rate!.round();
+    int numberOfStars = rate.round();
 
     return Row(
       children: List<Widget>.generate(
